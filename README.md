@@ -36,7 +36,8 @@ The website showcases my profile, skills, experience, and projects as a **Comput
 <img width="1834" height="848" alt="image" src="https://github.com/user-attachments/assets/7302892c-1c4b-405a-b9a7-3fde88d290c5" />
 
 ### ✉️ Contact Section  
-<img width="1833" height="854" alt="image" src="https://github.com/user-attachments/assets/c1ef5a0a-b28a-4d51-94f0-77a101ea9443" />
+<img width="1825" height="769" alt="image" src="https://github.com/user-attachments/assets/fcf08af1-0285-43a0-8ff4-4fa2dd74b7e9" />
+
 
 ---
 
