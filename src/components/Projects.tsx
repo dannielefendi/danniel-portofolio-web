@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Code, Smartphone, Eye, Database } from "lucide-react";
+import { Github, ExternalLink, Code, Smartphone, Eye, Database, Monitor } from "lucide-react";
+import {  Server } from "lucide-react";
+
 
 const Projects = () => {
   const projects = [
@@ -10,7 +12,7 @@ const Projects = () => {
       description: "A mobile application built with Flutter for task and reminder management. Features include local notifications, task categorization, and intuitive user interface design.",
       technologies: ["Flutter", "Dart", "Mobile Development"],
       icon: Smartphone,
-      githubUrl: "https://github.com/dannielefendi",
+      githubUrl: "https://github.com/dannielefendi/Flutter-Simple-Reminder-Project.git",
       category: "Mobile Development"
     },
     {
@@ -18,24 +20,24 @@ const Projects = () => {
       description: "Automatic Number Plate Recognition system using YOLOv8 for vehicle detection and PaddleOCR for text recognition. Implements computer vision techniques for real-time plate detection.",
       technologies: ["YOLOv8", "PaddleOCR", "Computer Vision", "Python"],
       icon: Eye,
-      githubUrl: "https://github.com/dannielefendi",
+      githubUrl: "https://github.com/dannielefendi/Automatic-Number-Plate-Recognition-for-Indonesian-Plates.git",
       category: "Computer Vision"
     },
     {
-      title: "AVL Tree Implementation",
-      description: "Complete implementation of AVL (Adelson-Velsky-Landis) Tree data structure with automatic balancing, insertion, deletion, and traversal operations.",
-      technologies: ["Data Structures", "Algorithms", "Tree Balancing"],
-      icon: Database,
-      githubUrl: "https://github.com/dannielefendi",
-      category: "Data Structures"
+      title: "SAT-U Website",
+      description: "A responsive web application developed with Laravel and Blade for managing Student Activity Transcript (SAT) data at Bina Nusantara University. The system includes seminar registration and other modules, providing an efficient platform for students and administrators to track and manage activities.",
+      technologies: ["Laravel", "Blade", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+      icon: Server,
+      githubUrl: "https://github.com/dannielefendi/SAT-U-Website",
+      category: "Full-Stack Web Development"
     },
     {
-      title: "Docker Hello World",
-      description: "Containerization project demonstrating Docker fundamentals, including Dockerfile creation, image building, and container deployment for web applications.",
-      technologies: ["Docker", "Containerization", "DevOps"],
-      icon: Code,
-      githubUrl: "https://github.com/dannielefendi",
-      category: "DevOps"
+      title: "Ashpatl 9 Rejens",
+      description: "A racing game-themed website inspired by Ashpatl 9: Rejens. The project began with visual concept design and references, followed by UI/UX prototyping in Figma. After multiple iterations and revisions, the final design was implemented using HTML, CSS, and JavaScript.",
+      technologies: ["Figma", "UI/UX Design", "HTML", "CSS", "JavaScript"],
+      icon: Monitor,
+      githubUrl: "https://github.com/dannielefendi/Project-HCI-Ashpatl-9-Rejens.git",
+      category: "Web Development"
     }
   ];
 

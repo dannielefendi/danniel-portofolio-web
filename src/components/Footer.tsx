@@ -11,7 +11,7 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: "#",
+      href: "https://www.linkedin.com/in/danniel-efendi-439007326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       label: "LinkedIn"
     },
     {
@@ -95,9 +95,8 @@ const Footer = () => {
                 © {currentYear} Danniel Efendi. All rights reserved.
               </p>
               <div className="flex items-center text-background/80">
-                <span>Made with</span>
-                <Heart className="h-4 w-4 mx-1 text-red-400" fill="currentColor" />
-                <span>using React & TypeScript</span>
+                <span>Portofolio</span>
+                <span>Web</span>
               </div>
             </div>
           </div>

@@ -1,20 +1,7 @@
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const { toast } = useToast();
 
   const contactInfo = [
     {
@@ -42,7 +29,7 @@ const Contact = () => {
       icon: Github,
       label: "GitHub",
       href: "https://github.com/dannielefendi",
-      color: "hover:text-primary"
+      color: "hover:text-gray-800"
     },
     {
       icon: Linkedin,
@@ -58,188 +45,91 @@ const Contact = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simple form validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Form Incomplete",
-        description: "Please fill in all required fields.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
-  };
-
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Get In <span className="text-primary">Touch</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get In <span className="text-blue-600">Touch</span>
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-4"></div>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               I'm always open to discussing new opportunities, collaborations, 
               or just having a conversation about technology and innovation.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 animate-slide-up">
-            {/* Contact Information */}
-            <div className="space-y-6">
-              <Card className="tech-border card-shadow hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-foreground">
-                    Contact Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-center p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors duration-200">
-                      <div className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg mr-4">
-                        <info.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{info.label}</p>
-                        {info.href !== "#" ? (
-                          <a
-                            href={info.href}
-                            className="text-foreground hover:text-primary transition-colors duration-200"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-foreground">{info.value}</p>
-                        )}
-                      </div>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Left Column - Contact Information */}
+            <Card className="border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-gray-900">
+                  Contact Information
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-center p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
+                    <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-lg mr-4">
+                      <info.icon className="h-5 w-5 text-blue-600" />
                     </div>
-                  ))}
-                </CardContent>
-              </Card>
+                    <div>
+                      <p className="text-sm text-gray-500">{info.label}</p>
+                      {info.href !== "#" ? (
+                        <a
+                          href={info.href}
+                          className="text-gray-900 hover:text-blue-600 transition-colors duration-200"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-gray-900">{info.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
 
-              {/* Social Links */}
-              <Card className="tech-border card-shadow hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-foreground">
-                    Connect With Me
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex space-x-4">
+            {/* Right Column - Social Links */}
+            <Card className="border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-gray-900">
+                  Connect With Me
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-col space-y-6">
+                  <div className="grid grid-cols-3 gap-4">
                     {socialLinks.map((social, index) => (
                       <a
                         key={index}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center justify-center w-12 h-12 bg-secondary rounded-lg ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-md`}
+                        className={`flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg ${social.color} transition-all duration-300 hover:scale-105 hover:shadow-md hover:bg-gray-100`}
                       >
-                        <social.icon className="h-5 w-5" />
+                        <social.icon className="h-8 w-8 mb-2" />
+                        <span className="text-xs font-medium">{social.label}</span>
                       </a>
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Follow me on social media for updates and insights into my projects and learning journey.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Form */}
-            <Card className="tech-border card-shadow hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-foreground">
-                  Send Me a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
-                        Name *
-                      </label>
-                      <Input
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
-                        Email *
-                      </label>
-                      <Input
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        required
-                      />
-                    </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      Follow me on social media for updates and insights into my projects and learning journey. 
+                      I regularly share my coding experiences, tech discoveries, and professional milestones.
+                    </p>
                   </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Subject
-                    </label>
-                    <Input
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What's this about?"
-                    />
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 mb-2">Let's Collaborate!</h4>
+                    <p className="text-sm text-gray-600">
+                      I'm always interested in new projects, whether it's web development, 
+                      mobile apps, or innovative tech solutions. Feel free to reach out!
+                    </p>
                   </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Message *
-                    </label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Your message here..."
-                      rows={5}
-                      required
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full hero-gradient text-white border-0 tech-shadow hover:scale-105 transition-all duration-300"
-                  >
-                    <Send className="mr-2 h-5 w-5" />
-                    Send Message
-                  </Button>
-                </form>
+                </div>
               </CardContent>
             </Card>
           </div>

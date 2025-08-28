@@ -25,7 +25,7 @@ const Experience = () => {
     {
       title: "Volunteer",
       company: "Religious Moderation (Jakarta)",
-      period: "2 months",
+      period: "1 day",
       type: "Volunteer Work",
       description: "Socialization about Religious Moderation at SMPN 229 in collaboration with TFI BINUS.",
       skills: ["Public Speaking", "Educational Outreach", "Collaboration", "Social Impact"],
