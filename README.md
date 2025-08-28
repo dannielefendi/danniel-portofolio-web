@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# 🌐 Danniel Efendi - Portfolio Website
 
-## Project info
+This is my personal **portfolio website**, built with **React (Vite) + TypeScript + TailwindCSS + shadcn/ui**.  
+The website showcases my profile, skills, experience, and projects as a **Computer Science student at Binus University**.  
 
-**URL**: https://lovable.dev/projects/d8561138-e67d-4c5e-9e02-f4cb7aba223c
+🔗 **Live Demo:** [danniel-portofolio-web.vercel.app](https://danniel-portofolio-web.vercel.app)  
+🔗 **GitHub Repo:** [github.com/dannielefendi/danniel-portofolio-web](https://github.com/dannielefendi/danniel-portofolio-web)  
+🔗 **LinkedIn:** [Danniel Efendi](https://www.linkedin.com/in/danniel-efendi-439007326)  
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
+- 👤 About section with profile photo & introduction  
+- 🛠️ Skills section (Programming, Tools, Soft Skills)  
+- 💼 Experience & Education timeline  
+- 📂 Projects section linking to GitHub repos  
+- ✉️ Contact form with toast notifications  
+- 🔗 Social links (GitHub, LinkedIn, Email)  
+- 📱 Fully responsive (mobile-first design)  
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d8561138-e67d-4c5e-9e02-f4cb7aba223c) and start prompting.
+## 🛠️ Tech Stack
+- **Frontend:** [React](https://react.dev/) (Vite, TypeScript)  
+- **UI & Styling:** [TailwindCSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/), [Lucide Icons](https://lucide.dev/)  
+- **Deployment:** [Vercel](https://vercel.com/)  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📸 Screenshots
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🏠 Hero Section  
+<img width="1854" height="861" alt="image" src="https://github.com/user-attachments/assets/0861e5de-3209-4ec0-b157-bc51adcdd02e" />
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 📂 Projects Section  
+<img width="1834" height="848" alt="image" src="https://github.com/user-attachments/assets/7302892c-1c4b-405a-b9a7-3fde88d290c5" />
 
-Follow these steps:
+### ✉️ Contact Section  
+<img width="1825" height="769" alt="image" src="https://github.com/user-attachments/assets/fcf08af1-0285-43a0-8ff4-4fa2dd74b7e9" />
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ⚡ Installation & Setup
+Clone this repo and run locally:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+# Clone repository
+git clone https://github.com/dannielefendi/danniel-portofolio-web.git
+
+# Navigate into project folder
+cd danniel-portofolio-web
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d8561138-e67d-4c5e-9e02-f4cb7aba223c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Build for Production
+npm run build
+npm run preview
