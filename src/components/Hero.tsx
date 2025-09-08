@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, FileText } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
@@ -9,6 +10,27 @@ const Hero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // State typing effect
+  const fullText = `Saya adalah seorang mahasiswa Computer Science di Binus University. 
+  Memiliki semangat tinggi, latar belakang akademik yang kuat, dan mampu 
+  berkomunikasi efektif dalam bahasa Inggris. Terbiasa bekerja dalam tim, 
+  terbuka terhadap tantangan baru, serta selalu mau belajar hal-hal baru.`;
+
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayedText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) {
+        clearInterval(interval);
+      }
+    }, 30); // kecepatan ketik (ms per huruf)
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-secondary/30 pt-20">
@@ -34,11 +56,8 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">
               Computer Science Student
             </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Saya adalah seorang mahasiswa Computer Science di Binus University. 
-              Memiliki semangat tinggi, latar belakang akademik yang kuat, dan mampu 
-              berkomunikasi efektif dalam bahasa Inggris. Terbiasa bekerja dalam tim, 
-              terbuka terhadap tantangan baru, serta selalu mau belajar hal-hal baru.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed whitespace-pre-line">
+              {displayedText}
             </p>
 
             {/* Action Buttons */}
