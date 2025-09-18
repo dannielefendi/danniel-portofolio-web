@@ -86,6 +86,17 @@ const Hero = () => {
                 </a>
               </Button>
               <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300"
+              >
+                <a href="/Danniel%20Efendi-resume.pdf" download="Danniel Efendi-resume.pdf">
+                  <FileText className="mr-2 h-5 w-5" />
+                  Download CV
+                </a>
+              </Button>
+              <Button
                 variant="ghost"
                 size="lg"
                 onClick={() => scrollToSection("#about")}
