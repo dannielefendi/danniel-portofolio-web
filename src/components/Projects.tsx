@@ -8,13 +8,14 @@ import {  Server } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Reminder App",
-      description: "A mobile application built with Flutter for task and reminder management. Features include local notifications, task categorization, and intuitive user interface design.",
-      technologies: ["Flutter", "Dart", "Mobile Development"],
-      icon: Smartphone,
-      githubUrl: "https://github.com/dannielefendi/Flutter-Simple-Reminder-Project.git",
-      category: "Mobile Development"
-    },
+      title: "CryptoScope",
+      description: "A cryptocurrency price tracking website built with React.js and deployed on Vercel. It provides real-time market data, 10-day graphs, cryptocurrency rankings, 24H high/low values, market capitalization, and current prices.",
+      technologies: ["React.js", "JavaScript", "HTML", "CSS", "Vercel", "Chart.js"],
+      icon: Monitor,
+      githubUrl: "https://github.com/dannielefendi/CryptoScope.git",
+      category: "Frontend Web Development"
+    },    
+
     {
       title: "ANPR System",
       description: "Automatic Number Plate Recognition system using YOLOv8 for vehicle detection and PaddleOCR for text recognition. Implements computer vision techniques for real-time plate detection.",
@@ -23,6 +24,7 @@ const Projects = () => {
       githubUrl: "https://github.com/dannielefendi/Automatic-Number-Plate-Recognition-for-Indonesian-Plates.git",
       category: "Computer Vision"
     },
+
     {
       title: "SAT-U Website",
       description: "A responsive web application developed with Laravel and Blade for managing Student Activity Transcript (SAT) data at Bina Nusantara University. The system includes seminar registration and other modules, providing an efficient platform for students and administrators to track and manage activities.",
@@ -31,14 +33,24 @@ const Projects = () => {
       githubUrl: "https://github.com/dannielefendi/SAT-U-Website",
       category: "Full-Stack Web Development"
     },
+
+    // {
+    //   title: "Ashpatl 9 Rejens",
+    //   description: "A racing game-themed website inspired by Asphalt 9: Legends. The project began with visual concept design and references, followed by UI/UX prototyping in Figma. After multiple iterations and revisions, the final design was implemented using HTML, CSS, and JavaScript.",
+    //   technologies: ["Figma", "UI/UX Design", "HTML", "CSS", "JavaScript"],
+    //   icon: Monitor,
+    //   githubUrl: "https://github.com/dannielefendi/Project-HCI-Ashpatl-9-Rejens.git",
+    //   category: "Web Development"
+    // },
+
     {
-      title: "Ashpatl 9 Rejens",
-      description: "A racing game-themed website inspired by Ashpatl 9: Rejens. The project began with visual concept design and references, followed by UI/UX prototyping in Figma. After multiple iterations and revisions, the final design was implemented using HTML, CSS, and JavaScript.",
-      technologies: ["Figma", "UI/UX Design", "HTML", "CSS", "JavaScript"],
-      icon: Monitor,
-      githubUrl: "https://github.com/dannielefendi/Project-HCI-Ashpatl-9-Rejens.git",
-      category: "Web Development"
-    }
+      title: "Reminder App",
+      description: "A mobile application built with Flutter for task and reminder management. Features include local notifications, task categorization, and intuitive user interface design.",
+      technologies: ["Flutter", "Dart", "Mobile Development"],
+      icon: Smartphone,
+      githubUrl: "https://github.com/dannielefendi/Flutter-Simple-Reminder-Project.git",
+      category: "Mobile Development"
+    }    
   ];
 
   const getCategoryColor = (category: string) => {
