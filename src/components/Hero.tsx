@@ -12,10 +12,7 @@ const Hero = () => {
   };
 
   // State typing effect
-  const fullText = `Saya adalah seorang mahasiswa Computer Science di Binus University. 
-  Memiliki semangat tinggi, latar belakang akademik yang kuat, dan mampu 
-  berkomunikasi efektif dalam bahasa Inggris. Terbiasa bekerja dalam tim, 
-  terbuka terhadap tantangan baru, serta selalu mau belajar hal-hal baru.`;
+  const fullText = `My name is Danniel Efendi, an enthusiastic and dedicated Computer Science student currently pursuing a Bachelor's degree at Binus University. Having a strong academic background and being able to communicate effectively in English, proven ability to work and communicate well in a team environment. Open to new challenges and willing to learn new things.`;
 
   const [displayedText, setDisplayedText] = useState("");
 
